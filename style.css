@@ -1,0 +1,269 @@
+/* Global Simple Solid Background & Responsive Design */
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  background: #d9e2ec; /* Simple light blue-gray background */
+  color: #222;
+  min-height: 100vh;
+  position: relative;
+}
+
+#background-gradient {
+  position: fixed;
+  z-index: -1;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: #d9e2ec; /* Match body background for clean, solid look */
+}
+
+header {
+  text-align: center;
+  padding: 48px 16px 18px 16px;
+  color: #35426b;
+}
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+}
+header p {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin: 6px 0 0 0;
+}
+
+footer {
+  text-align: center;
+  padding: 12px 0 16px 0;
+  font-size: 1rem;
+  color: #868c9c;
+  background: transparent;
+  margin-top: 60px;
+}
+
+.centered {
+  margin: 34px auto 0 auto;
+  text-align: center;
+}
+
+.glass-card {
+  background: rgba(255,255,255,0.85); /* More opaque to stand out on solid bg */
+  box-shadow: 0 8px 32px rgba(44,62,80,0.12);
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  max-width: 420px;
+  margin: 32px auto 32px auto;
+  padding: 32px 28px 22px 28px;
+  border: 1px solid rgba(225,225,225,0.30);
+}
+
+/* Button & Inputs */
+.cta-btn, button {
+  background: linear-gradient(90deg, #4A90E2 60%, #56e5e2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 11px 28px;
+  font-size: 1.02rem;
+  font-family: inherit;
+  font-weight: 600;
+  margin: 16px 6px 0 6px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, background 0.2s, transform 0.2s;
+  box-shadow: 0 3px 18px rgba(50,120,255,0.07);
+}
+.cta-btn:hover, button:hover {
+  background: linear-gradient(90deg, #357ABD 40%, #4fd1c5 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea {
+  background: rgba(255,255,255,0.85);
+  border: 1px solid #b3c5ef;
+  border-radius: 7px;
+  color: #232c54;
+  padding: 11px;
+  font-size: 1rem;
+  margin-bottom: 14px;
+  font-family: inherit;
+  outline: none;
+  box-shadow: 0 1px 7px rgba(110,130,220,0.06);
+}
+input:focus, textarea:focus {
+  border: 1.4px solid #56e5e2;
+  background: rgba(240,248,255,1);
+}
+
+form { text-align: center; }
+
+.hidden { display: none; }
+.fade-in { animation: fadeIn 0.4s;}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(24px) scale(.98);}
+  to { opacity: 1; transform: translateY(0) scale(1);}
+}
+
+/* Card Styles */
+.project-card, .proposal-card {
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  padding: 22px 18px 14px 18px;
+  margin: 13px auto;
+  box-shadow: 0 2px 16px rgba(40,60,95,0.11);
+  max-width: 480px;
+  text-align: left;
+  position: relative;
+  transition: box-shadow 0.2s;
+}
+.project-card:hover, .proposal-card:hover {
+  box-shadow: 0 4px 28px rgba(60,120,200,0.13);
+}
+
+/* Headings and Text */
+.project-title {
+  font-weight: 700;
+  font-size: 1.09rem;
+  color: #1976d2;
+  margin-bottom: 7px;
+}
+.project-desc {
+  font-style: italic;
+  margin-bottom: 11px;
+  color: #2d475c;
+  white-space: pre-line;
+}
+.project-budget {
+  font-size: 1rem;
+  color: #246bbb;
+  margin-bottom: 7px;
+  font-weight: 500;
+}
+.status {
+  font-size: 0.94rem;
+  font-weight: 700;
+  padding: 5px 13px;
+  border-radius: 14px;
+  display: inline-block;
+  margin: 6px 0 12px 0;
+  letter-spacing: 0.5px;
+  box-shadow: 0 1px 6px rgba(222,77,208,0.18);
+}
+.status-open { background: #ffefc1; color: #333; }
+.status-assigned { background: #a4dfe8; color: #326b7f; }
+.status-completed { background: #bbe3d5; color: #3d7d62; }
+
+.proposal-btn {
+  background: linear-gradient(90deg, #f39c12 35%, #ffe4b0 100%);
+  color: #174f65;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 0.97rem;
+  margin-top: 10px;
+  margin-bottom: 3px;
+  padding: 10px 24px;
+  border: none;
+  transition: background 0.2s, transform 0.17s;
+}
+.proposal-btn:hover {
+  background: linear-gradient(90deg, #d68910 55%, #f8e1b0 100%);
+  transform: scale(1.06);
+}
+
+/* Help Button */
+#help-btn {
+  position: fixed;
+  right: 18px;
+  bottom: 20px;
+  background: #4a90e2cc;
+  color: white;
+  font-size: 28px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(74,144,226,0.6);
+  transition: background 0.3s ease;
+  z-index: 999;
+}
+#help-btn:hover {
+  background: #357abdcc;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(30, 44, 70, 0.52);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  max-width: 420px;
+  padding: 30px 26px 22px 26px;
+  position: relative;
+  overflow-y: auto;
+  max-height: 80vh;
+  text-align: left;
+}
+
+.close {
+  position: absolute;
+  top: 16px;
+  right: 22px;
+  font-size: 28px;
+  color: #666;
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+  transition: color 0.3s;
+}
+.close:hover {
+  color: #222;
+}
+
+/* Contact form inputs inherit glass-card style */
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 11px;
+  border-radius: 7px;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid #b3c5ef;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 1px 6px rgba(110,130,220,0.12);
+  transition: border 0.3s ease;
+}
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: #56e5e2;
+  background: #f0f8ff;
+}
+
+.feedback {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #2d7a3e;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .glass-card, .project-card, .proposal-card { max-width: 97vw; padding: 13vw 4vw; }
+  header h1 { font-size: 2rem; }
+}
+
+/* Animations */
+.hidden { display: none; }
+.fade-in { animation: fadeIn 0.4s;}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(24px) scale(.98);}
+  to { opacity: 1; transform: translateY(0) scale(1);}
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mediator Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="background-gradient"></div>
+  <header>
+    <h1>Mediator Platform</h1>
+    <p>Connect clients and freelancers elegantly.</p>
+  </header>
+
+  <main>
+    <section id="role-selection" class="glass-card centered">
+      <h2>Start as:</h2>
+      <button id="client-btn" class="cta-btn">Client</button>
+      <button id="freelancer-btn" class="cta-btn">Freelancer</button>
+    </section>
+
+    <section id="client-section" class="glass-card hidden fade-in">
+      <h2>Post a New Project</h2>
+      <form id="project-form">
+        <input type="text" id="project-title" placeholder="Project Title" required />
+        <textarea id="project-desc" rows="2" placeholder="Project Description" required></textarea>
+        <input type="number" id="project-budget" placeholder="Budget (₹)" min="1" required />
+        <button type="submit" class="cta-btn">Post Project</button>
+      </form>
+      <h3>Your Projects</h3>
+      <div id="client-projects"></div>
+    </section>
+
+    <section id="freelancer-section" class="glass-card hidden fade-in">
+      <h2>Open Projects</h2>
+      <div id="open-projects"></div>
+      <h3>Your Proposals</h3>
+      <div id="freelancer-proposals"></div>
+    </section>
+  </main>
+
+  <button id="help-btn" title="Help & Contact">❓</button>
+
+  <!-- Modal -->
+  <div id="help-modal" class="modal hidden">
+    <div class="modal-content glass-card">
+      <span id="close-modal" class="close">&times;</span>
+      <h2>Help & Contact</h2>
+      <p>Welcome to Mediator Platform! Here you can:</p>
+      <ul>
+        <li><strong>Clients:</strong> Post projects and review freelancer proposals.</li>
+        <li><strong>Freelancers:</strong> Browse projects and send proposals.</li>
+      </ul>
+      <h3>Contact Us</h3>
+      <form id="contact-form">
+        <input type="text" id="contact-name" placeholder="Your Name" required />
+        <input type="email" id="contact-email" placeholder="Your Email" required />
+        <textarea id="contact-message" placeholder="Your Message" rows="3" required></textarea>
+        <button type="submit" class="cta-btn">Send</button>
+      </form>
+      <div id="contact-feedback" class="feedback"></div>
+      <h3>Contact Info</h3>
+      <p>Email: <a href="mailto:akashjadhav0262@gmail.com">akashjadhav0262@gmail.com</a></p>
+      <p>Phone: <a href="tel:+919148274538">+91 91482 74538</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <span>Made with 💙 for portfolio. &copy; 2025</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
