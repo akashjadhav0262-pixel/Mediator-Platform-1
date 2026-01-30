@@ -1,8 +1,7 @@
-/* Global Simple Solid Background & Responsive Design */
 body {
   margin: 0;
   font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
-  background: #d9e2ec; /* Simple light blue-gray background */
+  background: #d9e2ec; 
   color: #222;
   min-height: 100vh;
   position: relative;
@@ -12,7 +11,7 @@ body {
   position: fixed;
   z-index: -1;
   top: 0; left: 0; width: 100vw; height: 100vh;
-  background: #d9e2ec; /* Match body background for clean, solid look */
+  background: #d9e2ec; 
 }
 
 header {
@@ -46,7 +45,7 @@ footer {
 }
 
 .glass-card {
-  background: rgba(255,255,255,0.85); /* More opaque to stand out on solid bg */
+  background: rgba(255,255,255,0.85); 
   box-shadow: 0 8px 32px rgba(44,62,80,0.12);
   backdrop-filter: blur(8px);
   border-radius: 18px;
@@ -56,7 +55,6 @@ footer {
   border: 1px solid rgba(225,225,225,0.30);
 }
 
-/* Button & Inputs */
 .cta-btn, button {
   background: linear-gradient(90deg, #4A90E2 60%, #56e5e2 100%);
   color: #fff;
@@ -105,7 +103,6 @@ form { text-align: center; }
   to { opacity: 1; transform: translateY(0) scale(1);}
 }
 
-/* Card Styles */
 .project-card, .proposal-card {
   background: rgba(255,255,255,0.9);
   border-radius: 12px;
@@ -121,7 +118,6 @@ form { text-align: center; }
   box-shadow: 0 4px 28px rgba(60,120,200,0.13);
 }
 
-/* Headings and Text */
 .project-title {
   font-weight: 700;
   font-size: 1.09rem;
@@ -171,7 +167,6 @@ form { text-align: center; }
   transform: scale(1.06);
 }
 
-/* Help Button */
 #help-btn {
   position: fixed;
   right: 18px;
@@ -192,7 +187,6 @@ form { text-align: center; }
   background: #357abdcc;
 }
 
-/* Modal */
 .modal {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -227,7 +221,6 @@ form { text-align: center; }
   color: #222;
 }
 
-/* Contact form inputs inherit glass-card style */
 #contact-form input,
 #contact-form textarea {
   width: 100%;
@@ -260,7 +253,6 @@ form { text-align: center; }
   header h1 { font-size: 2rem; }
 }
 
-/* Animations */
 .hidden { display: none; }
 .fade-in { animation: fadeIn 0.4s;}
 @keyframes fadeIn {
